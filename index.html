@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<title>Google Cast Chrome Sender SDK: Hello Videos</title>
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+<script src="helloVideos.js"></script>
+</head>
+<body>
+  <div>
+    <div>
+      <h2 style="display:block">Google Cast Chrome Sender SDK: Hello Videos</h2>
+      <div style="float:left; width:100%; margin:10px;">
+        <h3 style="display: inline-block">Choose a media to cast</h3>
+      </div>
+      <br>
+      <div style="width:80%; margin:10px;">
+        <div style="margin:0px; float:left; width: 40%;">
+           <input type="radio" checked name="media" onclick="selectMedia(0);">Big Buck Bunny MP4<br>
+           <input type="radio" name="media" onclick="selectMedia(1);">Elephants Dream MP4<br>
+           <input type="radio" name="media" onclick="selectMedia(2);">Tears of Steel MOV<br>
+           <input type="radio" name="media" onclick="selectMedia(3);">Reel MP4<br>
+           <input type="radio" name="media" onclick="selectMedia(4);">Google I/O 2011 MP3<br>
+        </div>
+        <div style="margin:0px; float:left; width:250px;">
+           <img src="images/bunny.jpg" width="250" id="thumb">
+           <img src="images/cast_icon_idle.png" id="casticon" width="30">
+        </div>
+        <div style="margin-top:60px; float:left; width:20%;">
+	   <input class="vertical" type="range" min="0" max="100" step="1" onmouseup="setMediaVolume(1-this.value/100,false);">
+           <div class="vertical">Volume control</div>
+        </div>
+      </div>
+
+      <div style=" margin:10px; float:left; display:block; width:90%;">
+        <button onclick="launchApp()">Launch app</button>
+        <button onclick="stopApp()">Stop app</button>
+        <br>
+        <button onclick="loadMedia()">Load media</button>
+        <button id="playpauseresume" onclick="playMedia()">Play</button>
+        <button onclick="stopMedia()">Stop media</button>
+	<span id="muteText">Mute media</span>
+	<input type="checkbox" onclick="muteMedia(this);"> 
+      <div>
+
+      <div style="margin:10px;">
+        Progress : <input id="progress" type="range" min="1" max="100" value="1" step="1" onmouseup="seekMedia(this.value);">
+      </div>
+      <div style="margin:10px;">
+        State : <span id="playerstate">IDLE</span>
+      </div>
+
+      <div style="margin:10px;">
+        <textarea rows="20" cols="70" id="debugmessage">
+        </textarea>
+      </div>
+
+
+    </div>
+  </div>
+
+</body>
+</html>
