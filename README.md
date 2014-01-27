@@ -1,7 +1,7 @@
 # Cast-Chrome-Sender-CastVideos
 ===============================
 
-This Google Cast demo app shows how to cast videos from a Chrome browser using Cast Chrome Sender SDK. It serves to demonstrate how to write a HTML5/Javascript Cast sender app that is fully compliant with the Design Checklist.
+This Google Cast demo app shows how to cast videos from a Chrome browser using Cast Chrome Sender SDK. It demonstrates basic functionalities of the Chrome Sender SDK for media contents such as play, pause, resume, seek, set volume, mute/unmute. 
 
 ## Setup Instructions
 
@@ -14,8 +14,7 @@ This Google Cast demo app shows how to cast videos from a Chrome browser using C
  
 # Steps:
  1. Put all files on your own server
- 2. Change YOUR_APP_ID to your own in helloVideos.js (optional)
- 3. Make sure that your receiver app has a DIV with ID set to 'player' (optional)
+ 2. Use the default media receiver app: no change or change YOUR_APP_ID to your own in helloVideos.js
  4. Open a browser and point to your page at http://[YOUR_SERVER_LOCATION]/helloVideos/index.html
 
 ##Documentation

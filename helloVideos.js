@@ -1,8 +1,6 @@
 /**
  * global variables
  */
-//var applicationID = 'AA4AA778';
-//var applicationID = '23E4DB49';
 var currentMediaSession = null;
 var currentVolume = 0.5;
 var progressFlag = 1;
@@ -41,7 +39,10 @@ if (!chrome.cast || !chrome.cast.isAvailable) {
  * initialization
  */
 function initializeCastApi() {
-  var sessionRequest = new chrome.cast.SessionRequest(chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID);
+  // default app ID to the default media receiver app
+  // optional: you may change it to your own app ID/receiver
+  var applicationID = chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID;
+  var sessionRequest = new chrome.cast.SessionRequest(applicationID);
   var apiConfig = new chrome.cast.ApiConfig(sessionRequest,
     sessionListener,
     receiverListener);
