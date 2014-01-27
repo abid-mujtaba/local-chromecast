@@ -1,4 +1,4 @@
-# Cast-Chrome-Sender-CastVideos
+# CastHelloVideo-chrome
 ===============================
 
 This Google Cast demo app shows how to cast videos from a Chrome browser using Cast Chrome Sender SDK. It demonstrates basic functionalities of the Chrome Sender SDK for media contents such as play, pause, resume, seek, set volume, mute/unmute. 
