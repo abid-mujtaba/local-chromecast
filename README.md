@@ -30,3 +30,6 @@ Please read and follow the steps in the CONTRIBUTING.md
 
 License
 See LICENSE.md
+
+## Google+
+ Google Cast Developers Community on Google+ [http://goo.gl/TPLDxj](http://goo.gl/TPLDxj)
