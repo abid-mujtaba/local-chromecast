@@ -313,18 +313,42 @@ function setMediaVolume(level, mute) {
 }
 
 /**
+ * set receiver volume
+ * @param {Number} level A number for volume level
+ * @param {Boolean} mute A true/false for mute/unmute 
+ */
+function setReceiverVolume(level, mute) {
+  if( !session ) 
+    return;
+
+  if( !mute ) {
+    session.setReceiverVolumeLevel(level,
+      mediaCommandSuccessCallback.bind(this, 'media set-volume done'),
+      onError);
+    currentVolume = level;
+  }
+  else {
+    session.setReceiverMuted(true,
+      mediaCommandSuccessCallback.bind(this, 'media set-volume done'),
+      onError);
+  }
+}
+
+/**
  * mute media
  * @param {DOM Object} cb A checkbox element
  */
 function muteMedia(cb) {
   if( cb.checked == true ) {
     document.getElementById('muteText').innerHTML = 'Unmute media';
-    setMediaVolume(currentVolume, true);
+    //setMediaVolume(currentVolume, true);
+    setReceiverVolume(currentVolume, true);
     appendMessage("media muted");
   }
   else {
     document.getElementById('muteText').innerHTML = 'Mute media';
-    setMediaVolume(currentVolume, false);
+    //setMediaVolume(currentVolume, false);
+    setReceiverVolume(currentVolume, false);
     appendMessage("media unmuted");
   } 
 }
