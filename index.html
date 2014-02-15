@@ -9,7 +9,7 @@
 <body>
   <div>
     <div>
-      <h2 style="display:block">Google Cast Chrome Sender SDK: Hello Videos</h2>
+      <h2 style="display:block">Local Chromecast - Videos</h2>
       <div style="float:left; width:100%; margin:10px;">
         <h3 style="display: inline-block">Choose a media to cast</h3>
       </div>
@@ -23,13 +23,9 @@
            <input type="radio" name="media" onclick="selectMedia(4);">Google I/O 2011 MP3<br>
            <input type="radio" name="media" onclick="selectMedia(5);">Rectify<br>
         </div>
-        <div style="margin:0px; float:left; width:250px;">
-           <img src="images/bunny.jpg" width="250" id="thumb">
-           <img src="images/cast_icon_idle.png" id="casticon" width="30">
-        </div>
         <div style="margin-top:60px; float:left; width:20%;">
-	   <input class="vertical" type="range" min="0" max="100" step="1" onmouseup="setReceiverVolume(1-this.value/100,false);">
-           <div class="vertical">Volume control</div>
+	        <input class="vertical" type="range" min="0" max="100" step="1" onmouseup="setReceiverVolume(1-this.value/100,false);">
+            <div class="vertical" style="margin-top:50px">Volume control</div>
         </div>
       </div>
 
@@ -43,10 +39,11 @@
 	<span id="muteText">Mute media</span>
 	<input type="checkbox" onclick="muteMedia(this);"> 
       <div>
-
+      <br />
       <div style="margin:10px;">
-        Progress : <input id="progress" type="range" min="1" max="100" value="1" step="1" onmouseup="seekMedia(this.value);">
+        Progress : <input id="progress" class="seekbar" type="range" min="1" max="100" value="1" step="1" onmouseup="seekMedia(this.value);">
       </div>
+      <br /><br />
       <div style="margin:10px;">
         State : <span id="playerstate">IDLE</span>
       </div>
@@ -55,7 +52,6 @@
         <textarea rows="20" cols="70" id="debugmessage">
         </textarea>
       </div>
-
 
     </div>
   </div>

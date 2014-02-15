@@ -1,2 +1,5 @@
 # Media files are not a part of the repo
 media/
+
+# Ignore PyCharm files
+.idea/

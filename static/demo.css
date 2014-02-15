@@ -139,3 +139,9 @@ div.imageSub div.label {
     -webkit-transform: rotate(90deg);
 
 }
+
+
+.seekbar {
+    width:500px;
+    margin-left:10px;
+}
