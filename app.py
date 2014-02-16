@@ -36,6 +36,6 @@ def application(env, start_response):
 
     template = templateEnv.get_template(TEMPLATE_FILE)
 
-    output = template.render({"media": media, "media_path": MEDIA_URL_PATH})
+    output = template.render({"media": media, "media_path": MEDIA_URL_PATH, "root_path": ROOT_PATH})
 
     return str(output)      # The output has to be explicitly cast as a string for this to work

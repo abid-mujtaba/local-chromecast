@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Local Chromecast - Videos</title>
+<title>Local Chromecast</title>
 <link rel="stylesheet" type="text/css" href="static/demo.css">
 <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
 <script src="static/helloVideos.js"></script>
@@ -20,7 +20,8 @@
 <body>
   <div>
     <div>
-      <h2 style="display:block">Local Chromecast - Videos</h2>
+      <h2 style="display:block">Local Chromecast</h2>
+      <p>Stream/Cast local media to your ChromeCast</p>
       <div style="float:left; width:100%; margin:10px;">
         <h3 style="display: inline-block">Choose a video to cast</h3>
       </div>
@@ -64,6 +65,25 @@
         <textarea rows="20" cols="70" id="debugmessage">
         </textarea>
       </div>
+
+      <div>
+          <h3>Instructions:</h3>
+          <ol>
+              <li>Place media files (videos) in <i>{{ root_path }}/media</i> and refresh page</li>
+              <li>Click <i>Launch App</i> and choose the ChromeCast device in the popup that appears on the top-right of the page.</li>
+              <li>Select the file you wish to play/cast</li>
+              <li>Click <i>Load Media</i> and wait for the message <i>new media session ...</i></li>
+              <li>Click <i>Play</i> to start playing the video.</li>
+              <li>Use the <i>Progress</i> seekbar to change the play position of the video.</li>
+              <li>When done casting local videos click <i>Stop app</i> to release the Chromecast.</li>
+          </ol>
+
+          <b>Always keep an eye on the log for any error messages.</b>
+
+          <br /><br /><p><b>Source: </b><a href="https://github.com/abid-mujtaba/local-chromecast"><i>https://github.com/abid-mujtaba/local-chromecast</i></a> a fork of the Google Developer project <a href="https://github.com/googlecast/CastHelloVideo-chrome"><i>https://github.com/googlecast/CastHelloVideo-chrome</i></a>.</p>
+
+      </div>
+
 
     </div>
   </div>
