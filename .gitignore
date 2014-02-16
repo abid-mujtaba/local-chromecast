@@ -3,3 +3,6 @@ media/
 
 # Ignore PyCharm files
 .idea/
+
+# Ignore generated files
+build/
