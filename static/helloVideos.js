@@ -82,7 +82,6 @@ function onSuccess(message) {
 function onStopAppSuccess() {
   console.log('Session stopped');
   appendMessage('Session stopped');
-  document.getElementById("casticon").src = 'images/cast_icon_idle.png'; 
 }
 
 /**
@@ -137,7 +136,6 @@ function selectMedia(m) {
   appendMessage("media selected" + m);
   currentMediaURL = mediaURLs[m]; 
   var playpauseresume = document.getElementById("playpauseresume");
-  document.getElementById('thumb').src = mediaThumbs[m];
 }
 
 /**
@@ -157,7 +155,6 @@ function onRequestSessionSuccess(e) {
   console.log("session success: " + e.sessionId);
   appendMessage("session success: " + e.sessionId);
   session = e;
-  document.getElementById("casticon").src = 'images/cast_icon_active.png'; 
 }
 
 /**
@@ -221,7 +218,6 @@ function onMediaDiscovered(how, mediaSession) {
   mediaSession.addUpdateListener(onMediaStatusUpdate);
   mediaCurrentTime = currentMediaSession.currentTime;
   playpauseresume.innerHTML = 'Play';
-  document.getElementById("casticon").src = 'images/cast_icon_active.png'; 
 }
 
 /**
@@ -231,7 +227,6 @@ function onMediaDiscovered(how, mediaSession) {
 function onMediaError(e) {
   console.log("media error");
   appendMessage("media error");
-  document.getElementById("casticon").src = 'images/cast_icon_warning.png'; 
 }
 
 /**
