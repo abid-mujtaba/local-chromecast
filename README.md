@@ -2,7 +2,7 @@
 
 ## Synposis
 
-This project allows one to watch local media by streaming it to a Google ChromeCast present on the local network. The video is streamed at approximately 650 kbps at which speed the video quality is excellent.
+This project allows one to watch local media by streaming it to a Google ChromeCast present on the local network. The video is streamed at approximately 650 kbps at which speed the video quality is excellent. One can mute audio, pause and resume and use a seekbar to move playback to different parts of the video.
 
 NOTE: This does NOT require any hacking of the ChromeCast or registration with the Google backend. Simply set this project up on an Ubuntu computer which has Chrome and the Google Cast Chrome Extension installed and it will work.
 
@@ -21,3 +21,13 @@ The project comes with a Makefile which can be used to install and run it. Simpl
     sudo make install       # Sets up the project. Installs uwsgi, nginx and jinja2 (pip) if absent.
     sudo make start         # (re)starts the uwsgi and nginx services
     make run                # Launches the Controller page in Chrome
+
+## Usage
+
+Copy or better yet create symlinks for the Media files you wish to play in the `/media` subfolder of this project. Then launch the project website by either running `make run` or navigating to `http://localhost:3435` in Chrome.
+
+Click the `Launch App` button. A pop-up will appear in the browser window asking you to choose the ChromeCast device to cast to. Make your selection.
+
+Select the Media file you want to play and click on `Load Media`. Wait for the log window to show the `Media selected ...` message.
+
+Click `Play` and off you go.
