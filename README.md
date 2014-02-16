@@ -14,6 +14,13 @@ The project is basically a modification of the "HelloVideos" project provided by
 
 I have ONLY had success with mp3 and mp4 files. In particular I was unable to play avi files using this technique probably because HTML5 (which is what the ChromeCast uses) has no avi support in any browser.
 
+## Requirements
+
+- Chromecast device
+- Chrome browser
+- "Google Cast" extension on the Chrome browser
+- Ubuntu (the Makefile uses apt-get). A little work will make this function on any Linux variant.
+
 ## Installation
 
 The project comes with a Makefile which can be used to install and run it. Simply navigate to the project root folder and issue:
