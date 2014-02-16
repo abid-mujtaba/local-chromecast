@@ -1,6 +1,8 @@
 
 body {
-  background-color:#eeeeff;
+/* Source of background-image: http://pichost.me/1355800/*/
+  background-image:url('background.jpg');
+  background-color:#80b2ff;
   font-family: 'Roboto', "Open Sans", "Verdana", Georgia, Serif;
 }
 
